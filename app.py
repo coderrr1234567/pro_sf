@@ -12,7 +12,7 @@ db = client['your_database_name']
 app.secret_key = 'your_secret_key'  
 
 def load_bad_ips():
-    with open('bad_ip.txt', 'r') as file:  
+    with open('nonauthrazip.txt', 'r') as file:  
         bad_ips = set(line.strip() for line in file if line.strip())
     return bad_ips
 
