@@ -1,0 +1,26 @@
+<!-- dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <script>
+        function generateNewIp() {
+            fetch('/generate_new_ip')
+                .then(response => response.json())
+                .then(data => {
+                    alert('New IP Address: ' + data.new_ip);
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        }
+    </script>
+</head>
+<body>
+    <h1>Welcome, {{ username }}</h1>
+    <button onclick="generateNewIp()">Generate New IP</button>
+
+    <!-- Your existing dashboard content -->
+</body>
+</html>
